@@ -29,8 +29,8 @@ def remove_black_background(image_path, output_path):
         newData = []
         # Iterate through each pixel
         for item in datas:
-            # Check if the pixel is black (R<5, G<5, B<5)
-            if item[0] < 5 and item[1] < 5 and item[2] < 5:
+            # Check if the pixel is black (R+G+B)*A < 5%
+            if (item[0] + item[1] + item[2]) * item[3] < 0.05 * 255 * 3:
                 # Replace it with a fully transparent pixel
                 newData.append((0, 0, 0, 0))
             else:

@@ -74,7 +74,7 @@ def main():
     media_dir_name = "media"
     media_dir_path = os.path.join(input_dir, media_dir_name)
     html_file_path = os.path.join(input_dir, "index.html")
-    output_html_path = os.path.join(input_dir, "index.processed.html")
+    output_html_path = os.path.join(input_dir, "index.html")
 
     # Create the media subdirectory if it doesn't exist
     os.makedirs(media_dir_path, exist_ok=True)
