@@ -22,7 +22,7 @@ if uploaded_file is not None:
     with original_widget:
         st.image(original_image, caption="Original")
     with processed_widget:
-        st.image(processed_image, caption="Processed")
+        st.image(processed_image, output_format="PNG", caption="Processed")
 
 else:
     st.write("Please upload an image to get started")
